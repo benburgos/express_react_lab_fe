@@ -5,5 +5,9 @@
 header {
   margin: auto;
   padding: 8px;
-  background-color: #fff;
+  background-color: #fafafa;
+}
+
+.navbar-brand, .navbar-menu {
+  background-color: #fafafa;
 }

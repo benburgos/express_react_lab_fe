@@ -1,5 +1,7 @@
+import { Footer as Footers } from 'react-bulma-components';
+
 function Footer(props) {
-  return <h1>Footer</h1>;
+  return <Footers>Portfolio by Ben Burgos</Footers>;
 }
 
 export default Footer;
