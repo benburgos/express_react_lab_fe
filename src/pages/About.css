@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.card-image {
+  width: 200px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0.125em 0.25em rgb(10 10 10 / 10%);
+}
+
+.card-footer {
+  justify-content: space-evenly;
+}

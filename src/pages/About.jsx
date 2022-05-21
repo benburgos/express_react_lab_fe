@@ -1,4 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './About.css';
+import { Card, Button } from 'react-bulma-components';
+
+const { Header, Image, Content, Footer } = Card;
 
 function About(props) {
   // Create state to hold About data
@@ -16,17 +21,34 @@ function About(props) {
 
   // Make the initial call for the data inside a useEffect,
   // So it only happens once on component load.
-  useEffect(() => {getAboutData()}, []);
+  useEffect(() => {
+    getAboutData();
+  }, []);
 
   // Define a function that will return JSX needed once we
   // get the data.
   const loaded = () => (
-    <div>
-      <h2>{about.name}</h2>
-      <h3>{about.email}</h3>
-      <h3>{about.linkedin}</h3>
-      <p>{about.bio}</p>
-    </div>
+    <Card>
+      <Header>
+        <Image src={about.headshot} />
+        {about.name}
+        <br />
+        {about.email}
+      </Header>
+      <Content>
+        {about.bio}
+        <br />
+        <br />
+        <Footer>
+          <Button to={about.linkedin} renderAs={Link}>
+            LinkedIn
+          </Button>
+          <Button to='https://github.com/benburgos' renderAs={Link}>
+            Github
+          </Button>
+        </Footer>
+      </Content>
+    </Card>
   );
 
   // If the data arrives return the result of loaded, if not
