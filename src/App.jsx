@@ -1,4 +1,5 @@
 import './App.css';
+import 'bulma/css/bulma.min.css';
 
 // Import Components
 import Header from './components/Header';

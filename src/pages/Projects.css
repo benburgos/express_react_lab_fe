@@ -1,0 +1,18 @@
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: auto;
+}
+
+.button-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+img {
+  padding: 8px;
+  width: 60%;
+}
+
