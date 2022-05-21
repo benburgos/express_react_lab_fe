@@ -1,10 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+// Import Router
+import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// Wrap our application inside of router to enable using router
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
