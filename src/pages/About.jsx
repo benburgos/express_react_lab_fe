@@ -16,14 +16,15 @@ function About(props) {
 
   // Make the initial call for the data inside a useEffect,
   // So it only happens once on component load.
-  useEffect(() => getAboutData(), []);
+  useEffect(() => {getAboutData()}, []);
 
   // Define a function that will return JSX needed once we
   // get the data.
   const loaded = () => (
     <div>
       <h2>{about.name}</h2>
-      <h3>{about.email}</h3> | <h3>{about.linkedin}</h3>
+      <h3>{about.email}</h3>
+      <h3>{about.linkedin}</h3>
       <p>{about.bio}</p>
     </div>
   );
