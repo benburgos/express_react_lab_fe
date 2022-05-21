@@ -37,15 +37,16 @@ function About(props) {
       </Header>
       <Content>
         {about.bio}
+
         <br />
         <br />
         <Footer>
-          <Button to={about.linkedin} renderAs={Link}>
-            LinkedIn
-          </Button>
-          <Button to='https://github.com/benburgos' renderAs={Link}>
-            Github
-          </Button>
+          <a href={about.linkedin}>
+            <Button>LinkedIn</Button>
+          </a>
+          <a href="https://github.com/benburgos">
+            <Button>Github</Button>
+          </a>
         </Footer>
       </Content>
     </Card>
