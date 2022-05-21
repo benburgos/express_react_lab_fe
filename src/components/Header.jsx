@@ -1,22 +1,30 @@
 import { Link } from 'react-router-dom';
+import { Navbar, Button } from 'react-bulma-components';
+
+const { Container, Menu, Brand, Item } = Navbar;
 
 function Header(props) {
-  const navStyle = {
-    display: 'flex',
-    justifyContent: 'space-around',
-    border: '3px solid black',
-    padding: '8px',
-    width: '90%',
-    margin: 'auto',
-  };
   return (
     <header>
-      <h1>My Portfolio Page</h1>
-      <nav style={navStyle}>
-        <Link to='/'>HOME</Link>
-        <Link to='/about'>ABOUT</Link>
-        <Link to='/projects'>PROJECTS</Link>
-      </nav>
+      <Navbar>
+        <Brand>
+          <Item href="/">MY PORTFOLIO</Item>
+        </Brand>
+        <Menu>
+          <Container>
+            <Item>
+              <Button to="/projects" renderAs={Link}>
+                Projects
+              </Button>
+            </Item>
+            <Item>
+              <Button to="/about" renderAs={Link}>
+                About
+              </Button>
+            </Item>
+          </Container>
+        </Menu>
+      </Navbar>
     </header>
   );
 }
